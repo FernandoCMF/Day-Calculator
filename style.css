@@ -4,25 +4,47 @@
   box-sizing: border-box;
 }
 
-.container__counter {
-  height: 100vh;
-  width: 100%;
-  background: #ede7d0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header__container {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.content__header {
-  background-color: aqua;
+.header__content {
   width: 100%;
-  max-width: 100%;
-  max-height: 40%;
-  height: 100px;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: #034f39;
+  background-color: #ede7d0;
+}
+.header__content h1,
+h2 {
+  margin: 5px 0px;
+}
+.header__image {
+  height: 100%;
+  width: 100%;
+  background-image: url(./imgs/img-1.jpg);
+  background-color: #549369;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container__counter {
+  height: 250px;
+  width: 100%;
+  background: #034f39;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .content__counter {
@@ -31,6 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ede7d0;
 }
 
 .input__date-counter {
@@ -51,6 +74,7 @@
   border-radius: 15px;
   color: #fff;
   text-align: center;
+  -webkit-user-select: none;
 }
 
 .input__date-counter button {
@@ -60,8 +84,8 @@
   font-size: 20px;
   font-weight: bold;
   background: none;
-  border: 2px solid #034f39;
+  border: 2px solid #ede7d0;
   border-radius: 15px;
-  color: #034f39;
+  color: #ede7d0;
   text-align: center;
 }
