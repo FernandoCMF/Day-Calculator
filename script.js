@@ -19,5 +19,10 @@ function calculateDateDiff() {
 
 button.addEventListener('click', () => {
   const diffInDay = calculateDateDiff();
-  span.innerHTML = diffInDay;
+  if (diffInDay === NaN) {
+    console.log('deu ruim');
+  } else {
+    console.log(diffInDay);
+    span.innerHTML = diffInDay;
+  }
 });
