@@ -1,28 +1,17 @@
 const inputStart = document.querySelector('#start');
 const inputEnd = document.querySelector('#end');
-const button = document.querySelector('button');
+const buttonDate = document.querySelector('#btn-date');
 const span = document.querySelector('h1 > span');
 
-function calculateDateDiff() {
-  let initalDate = inputStart.value;
-  let finalDate = inputEnd.value;
+import { dateCalculator } from './date-calculator.js';
+import { todoListCreate } from './todo-list.js';
 
-  initalDate = new Date(initalDate);
-  finalDate = new Date(finalDate);
-
-  let diffInTime = Math.abs(finalDate - initalDate);
-  let timeInOneDay = 1000 * 60 * 60 * 24;
-  let diffInDay = diffInTime / timeInOneDay;
-
-  return diffInDay;
-}
-
-button.addEventListener('click', () => {
-  const diffInDay = calculateDateDiff();
-  if (diffInDay === NaN) {
-    console.log('deu ruim');
-  } else {
-    console.log(diffInDay);
-    span.innerHTML = diffInDay;
-  }
+buttonDate.addEventListener('click', () => {
+  actionButton();
+  todoListCreate(inputStart, inputEnd);
 });
+
+const actionButton = () => {
+  const diffInDay = dateCalculator(inputStart, inputEnd);
+  span.innerHTML = diffInDay;
+};

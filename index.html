@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/d8a9e035ab.js"
@@ -32,11 +38,18 @@
         <div class="input__date-counter">
           <input type="date" id="start" />
           <input type="date" id="end" />
-          <button type="submit">Calculate Days</button>
+          <button id="btn-date" type="submit">Calculate Days</button>
         </div>
         <h1>Amount of days: <span>?</span></h1>
       </div>
     </section>
-    <script src="./script.js"></script>
+    <!-- Todo-list create -->
+    <section class="container__todo-list">
+      <h2>Your reservations made</h2>
+      <div class="content__todo-list" id="todoList">
+        <ul class="todo-list" id="todoList"></ul>
+      </div>
+    </section>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
